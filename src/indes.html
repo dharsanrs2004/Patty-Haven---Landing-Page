@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output.PNG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PKPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV70QPJk19QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div id="stars">
+
+        </div>
+        <div class="navbar">
+            <img src="assest/logo.png">
+            <p>"FRESH PATTIES BIG FLAVORS"</p>
+            <div class="center-nav">
+                <a href="">HOME</a>
+                <a href="">MENU</a>
+                <a href="">ABOUT</a>
+                <a href="">SHOP</a>
+            </div>
+            <div class="social">
+                <a href=""><i><i class="fa-solid fa-magnifying-glass"></i></i></a>
+                <a href=""><i><i class="fa-solid fa-cart-shopping"></i></i></a>
+                <a href=""><i><i class="fa-solid fa-house"></i></i></a>
+            </div>
+        </div>
+        
+        <div class="text">
+            <h1>WELCOME TO<BR> PATTY HAVEN!</h1>
+            <h2>"FRESH PATTIES BIG FLAVORS"</h2>
+            <br>
+            <p>Where every bite is a flavor-packed experience. Discover our juicy, mouthwatering burgers made with the freshest ingredients. Whether you're craving classic flavors or something unique, we've got the perfect patty for you!</p>
+            <a href="" class="btn">Order Now</a>
+            <a href="" class="btn">View More</a>
+        </div>
+
+        <div class="burger">
+            <img src="assest/burger.png">
+            <img src="assest/pngwing.com (12).png">
+            <img src="assest/buger2.png">
+            <img src="assest/Flying Burger PNG Image - 2084x2084.png">
+            <img src="assest/pngwing.com (16).png">
+        </div>
+
+        <div class="burger-toggle">
+            <img src="assest/Flying Burger PNG Image - 2084x2084.png" alt="Flying" class="active">
+        </div>
+    </header>
+    
+    <script>
+        const burgerImages = document.querySelectorAll('burger img');
+        const burgerImages = document.querySelectorAll('burger-toggle img');
+        let currentIndex = 0;
+
+        toggleImages[currentIndex].classList.add('active');
+        
+        burgerImages.forEach((img, index)=>{
+            img.addEventListener('click',()=>{
+                toggleImages.forEach(toggleImg => toggleImg.classList.remove('active'));
+                toggleImages[currentIndex].classList.add('active');
+                toggleImages[currentIndex].src = burgerImages[index].src;
+                currentIndex = (currentIndex + 1)%toggleImages.length;
+            });
+        });
+
+        //Generate random stars
+        function createStars(){
+            const starsContainer = document.getElementById('stars');
+            const WindowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            for(let i=0;i<100;i++){
+                const starsContainer = document.createElement('div');
+                star.className='star';
+                star.style.left='${Math.random() * WindowWidth}px)';
+                star.style.top='${Math.random() * WindowHeight}px)';
+                starsContainer.appendChild(star);
+            }   
+        }
+    </script>
+</body>
+</html>
